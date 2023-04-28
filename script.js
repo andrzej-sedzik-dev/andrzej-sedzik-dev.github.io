@@ -2,7 +2,7 @@ $(document).ready(function() {
   // const apiRoot = 'https://tasks-prod-kodilla-tasks-k6sear.mo1.mogenius.io/v1/tasks';
   // const trelloApiRoot = 'https://tasks-prod-kodilla-tasks-k6sear.mo1.mogenius.io/v1/tasks/v1/trello';
 
-  const apiRoot = 'localhost:8080/v1/tasks';
+  const apiRoot = 'localhost:8080/v1/tasks/createTask';
   const trelloApiRoot = 'https://tasks-prod-kodilla-tasks-k6sear.mo1.mogenius.io/v1/tasks/v1/trello';
 
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
@@ -10,7 +10,6 @@ $(document).ready(function() {
 
   var availableBoards = {};
   var availableTasks = {};
-
   // init
 
   getAllTasks();
@@ -19,6 +18,7 @@ $(document).ready(function() {
     var requestUrl = trelloApiRoot + '/boards';
 
     $.ajax({
+
       url: requestUrl,
       method: 'GET',
       contentType: 'application/json',
