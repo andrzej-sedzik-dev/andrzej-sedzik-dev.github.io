@@ -68,7 +68,7 @@
     }
 
     function getAllTasks() {
-      const requestUrl = apiRoot/createTask;
+      const requestUrl = apiRoot;
 
       $.ajax({
         url: requestUrl,
