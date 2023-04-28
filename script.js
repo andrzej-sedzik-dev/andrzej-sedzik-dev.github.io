@@ -5,7 +5,7 @@
     // const trelloApiRoot = 'https://tasks-prod-kodilla-tasks-k6sear.mo1.mogenius.io/v1/tasks/v1/trello';
 
     const apiRoot = 'http://localhost:8080/v1/tasks';
-    const trelloApiRoot = 'http://localhost:8080/v1/trello/getTrelloBoards';
+    const trelloApiRoot = 'http://localhost:8080/v1/trello';
     const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
     const $tasksContainer = $('[data-tasks-container]');
 
@@ -17,7 +17,7 @@
     getAllTasks();
 
     function getAllAvailableBoards(callback, callbackArgs) {
-      var requestUrl = trelloApiRoot + '/boards';
+      var requestUrl = trelloApiRoot + '/getTrelloBoards';
 
       $.ajax({
         url: requestUrl,
